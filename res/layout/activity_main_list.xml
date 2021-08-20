@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/omomo_background"
+        >
+
+    <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/list_header_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/omomo_navy">
+
+        <TextView android:id="@+id/list_header"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textStyle="normal"
+                  android:textSize="@dimen/omomo_header_text_size"
+                  android:textColor="@android:color/white"
+                  android:padding="@dimen/omomo_header_padding"
+                  android:textAllCaps="true"
+                  android:text="@string/omomo_choose_repertoire"/>
+
+        <ImageButton
+                android:id="@+id/btn_omomo_actual_position_off"
+                android:layout_width="@dimen/omomo_main_list_image_gps_width"
+                android:layout_height="@dimen/omomo_main_list_image_gps_height"
+                android:layout_marginTop="@dimen/omomo_main_list_image_gps_margin_top"
+                android:background="@android:color/transparent"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_action_device_gps_off"
+                />
+
+        <ImageButton
+                android:id="@+id/btn_omomo_actual_position_on"
+                android:layout_width="@dimen/omomo_main_list_image_gps_width"
+                android:layout_height="@dimen/omomo_main_list_image_gps_height"
+                android:layout_marginTop="@dimen/omomo_main_list_image_gps_margin_top"
+                android:background="@android:color/transparent"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_action_device_gps_fixed"
+                />
+
+        <TextView android:id="@+id/text_omomo_actual_position_on"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textStyle="normal"
+                  android:textSize="@dimen/omomo_button_text_size"
+                  android:textColor="@android:color/white"
+                  android:layout_marginRight="@dimen/omomo_main_list_text_gps_margin_right"
+                  android:paddingTop="@dimen/omomo_main_list_text_gps_padding_top"
+                  android:visibility="gone"
+                  android:layout_alignParentRight="true"
+                  android:text="10 km"/>
+
+        <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/list_header_filtr_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/list_header"
+                android:visibility="gone"
+                android:background="@color/omomo_navy">
+
+            <TextView android:id="@+id/list_header_filtr"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:textStyle="normal"
+                      android:textSize="@dimen/omomo_main_list_filtr_text_size"
+                      android:textColor="@android:color/white"
+                      android:paddingLeft="@dimen/omomo_main_list_filtr_padding_left"
+                      android:paddingRight="@dimen/omomo_main_list_filtr_padding_right"
+                      android:visibility="gone"
+                      android:text="filtr"/>
+
+            <Button
+                    android:id="@+id/btn_omomo_filtr_clean"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/omomo_button_height"
+                    android:drawableLeft="@drawable/ic_action_action_highlight_remove"
+                    android:text="wyczyść filtr"
+                    android:paddingLeft="@dimen/omomo_main_list_filtr_button_padding_left"
+                    android:background="@android:color/transparent"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/omomo_main_list_filtr_text_size"
+                    android:layout_below="@+id/list_header_filtr"
+                    />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/swipe_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/list_header_container"
+            >
+
+        <ListView
+                android:id="@android:id/list"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:fadeScrollbars="true"
+                android:paddingTop="@dimen/omomo_padding"
+                android:paddingLeft="@dimen/omomo_padding"
+                android:paddingRight="@dimen/omomo_padding"
+                android:dividerHeight="@dimen/omomo_main_list_filtr_divider_height"
+                android:divider="@color/omomo_background"
+                android:choiceMode="singleChoice"
+                />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <RelativeLayout android:id="@android:id/empty"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center">
+
+        <TextView android:id="@+id/empty_list"
+                  android:text="@string/omomo_no_repertoire"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textColor="@color/omomo_navy"
+                  android:textSize="@dimen/omomo_main_list_filtr_no_repertoire_text_size"
+                />
+
+    </RelativeLayout>
+
+</RelativeLayout>

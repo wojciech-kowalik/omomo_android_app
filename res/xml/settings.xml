@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        >
+
+    <PreferenceCategory
+            android:title="@string/omomo_localizations">
+
+        <!--<CheckBoxPreference-->
+                <!--android:key="omomo_settings_location_draw_circle"-->
+                <!--android:defaultValue="true"-->
+                <!--android:title="@string/omomo_localizations_draw_area"-->
+                <!--android:summary="@string/omomo_localizations_circle"/>-->
+
+        <ListPreference
+                android:key="omomo_settings_location_distance_value"
+                android:defaultValue="@string/omomo_default_distance_value"
+                android:dialogTitle="@string/omomo_localizations_choose_distance"
+                android:entries="@array/number_messages"
+                android:entryValues="@array/number_messages"
+                android:title="@string/omomo_localizations_search_range"
+                android:summary="@string/omomo_localizations_choose_value"
+                />
+
+    </PreferenceCategory>
+
+    <!--<PreferenceCategory-->
+            <!--android:title="@string/omomo_maps">-->
+
+        <!--<CheckBoxPreference-->
+                <!--android:key="omomo_settings_hr_map_preview"-->
+                <!--android:defaultValue="false"-->
+                <!--android:title="Wysoka jakość podglądu map"-->
+                <!--android:summary="Niezależnie od połączenia internetowego (WIFI, 3G, LTE)"/>-->
+
+    <!--</PreferenceCategory>-->
+
+    <PreferenceCategory
+            android:title="@string/omomo_orders">
+
+        <PreferenceScreen
+                android:key="omomo_settings_order_address_data"
+                android:title="Twoje dane adresowe"
+                android:summary="Naciśnij aby wprowadzić dane, które zostaną automatycznie wprowadzone w formularzu zamówienia">
+
+                <EditTextPreference
+                        android:key="omomo_settings_order_address_data_name"
+                        android:defaultValue=""
+                        android:textColor="@color/omomo_navy"
+                        android:summary="Podaj imię"
+                        android:title="Imię" />
+
+                <EditTextPreference
+                        android:key="omomo_settings_order_address_data_surname"
+                        android:defaultValue=""
+                        android:textColor="@color/omomo_navy"
+                        android:summary="Podaj nazwisko"
+                        android:title="Nazwisko" />
+
+                <EditTextPreference
+                        android:key="omomo_settings_order_address_data_email"
+                        android:defaultValue=""
+                        android:textColor="@color/omomo_navy"
+                        android:summary="Podaj email"
+                        android:title="Email" />
+
+                <EditTextPreference
+                        android:key="omomo_settings_order_address_data_street_number"
+                        android:defaultValue=""
+                        android:textColor="@color/omomo_navy"
+                        android:summary="Podaj ulice i numer domu"
+                        android:title="Ulica numer domu" />
+
+                <EditTextPreference
+                        android:key="omomo_settings_order_address_data_post"
+                        android:defaultValue=""
+                        android:textColor="@color/omomo_navy"
+                        android:summary="Podaj kod pocztowy"
+                        android:title="Kod pocztowy" />
+
+                <EditTextPreference
+                        android:key="omomo_settings_order_address_data_phone"
+                        android:defaultValue=""
+                        android:textColor="@color/omomo_navy"
+                        android:summary="Podaj numer telefonu"
+                        android:title="Telefon" />
+
+                <EditTextPreference
+                        android:key="omomo_settings_order_address_data_city"
+                        android:defaultValue=""
+                        android:textColor="@color/omomo_navy"
+                        android:summary="Podaj miejscowość"
+                        android:title="Miejscowość" />
+
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

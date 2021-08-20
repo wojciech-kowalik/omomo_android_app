@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/menu_reload"
+        android:title="Odśwież"
+        android:icon="@drawable/ic_action_action_autorenew"
+        android:showAsAction="always"/>
+
+    <item android:id="@+id/menu_return"
+          android:title="Repertuar"
+          android:icon="@drawable/ic_action_home"
+          android:showAsAction="always"/>
+</menu>

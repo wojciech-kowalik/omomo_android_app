@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:background="@color/omomo_background"
+        >
+
+    <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/omomo_padding_bottom"
+            >
+
+        <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/header_event"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/omomo_navy"
+                >
+
+            <TextView android:id="@+id/list_header_event"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:gravity="center_vertical"
+                      android:textStyle="normal"
+                      android:textSize="@dimen/omomo_header_text_size"
+                      android:textColor="@android:color/white"
+                      android:padding="@dimen/omomo_header_padding"
+                      android:singleLine="false"
+                      android:textAllCaps="true"
+                      android:text="@string/omomo_event"/>
+
+        </RelativeLayout>
+
+        <ImageView
+                android:id="@+id/event_data_image"
+                android:layout_width="@dimen/omomo_event_data_image_width"
+                android:layout_height="@dimen/omomo_event_data_image_height"
+                android:layout_margin="@dimen/omomo_event_data_margin"
+                android:layout_alignRight="@+id/event_category_header"
+                android:layout_below="@+id/header_event"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"/>
+
+        <TextView android:id="@+id/event_category_header"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:textStyle="bold"
+                  android:paddingLeft="@dimen/omomo_header_padding_left"
+                  android:paddingTop="@dimen/omomo_header_padding_top"
+                  android:textSize="@dimen/omomo_sub_header_text_size"
+                  android:textColor="@color/omomo_gray"
+                  android:layout_below="@+id/header_event"
+                  android:text="@string/omomo_category"
+                />
+
+        <Button android:id="@+id/event_category_name"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/omomo_event_data_button_category_height"
+                android:textStyle="normal"
+                android:paddingLeft="@dimen/omomo_event_data_button_padding_left"
+                android:textSize="@dimen/omomo_sub_header_value_text_size"
+                android:layout_below="@+id/event_category_header"
+                android:textColor="@color/omomo_navy"
+                android:background="@android:color/transparent"
+                android:gravity="left|center_vertical"
+                android:drawableLeft="@drawable/ic_action_info"
+                android:text="@string/omomo_category"
+                />
+
+        <TextView android:id="@+id/event_latest"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:textStyle="bold"
+                  android:paddingLeft="@dimen/omomo_header_padding_left"
+                  android:textSize="@dimen/omomo_sub_header_text_size"
+                  android:textColor="@color/omomo_gray"
+                  android:layout_below="@+id/event_category_name"
+                  android:text="@string/omomo_latest"
+                />
+
+        <Button android:id="@+id/event_latest_date"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:paddingLeft="@dimen/omomo_event_data_button_padding_left"
+                android:textSize="@dimen/omomo_sub_header_value_text_size"
+                android:layout_below="@+id/event_latest"
+                android:textColor="@color/omomo_navy"
+                android:background="@android:color/transparent"
+                android:gravity="left|center_vertical"
+                android:drawableLeft="@drawable/ic_action_time"
+                android:text="@string/omomo_date"
+                />
+
+        <TextView android:id="@+id/event_latest_place_header"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:textStyle="bold"
+                  android:paddingLeft="@dimen/omomo_header_padding_left"
+                  android:textSize="@dimen/omomo_sub_header_text_size"
+                  android:textColor="@color/omomo_gray"
+                  android:layout_below="@+id/event_latest_date"
+                  android:text="@string/omomo_where"
+                />
+
+        <Button android:id="@+id/event_latest_place"
+                android:layout_width="@dimen/omomo_event_data_button_place_width"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:paddingLeft="@dimen/omomo_event_data_button_padding_left"
+                android:paddingBottom="@dimen/omomo_event_data_event_decription"
+                android:textSize="@dimen/omomo_sub_header_value_text_size"
+                android:layout_below="@+id/event_latest_place_header"
+                android:textColor="@color/omomo_navy"
+                android:background="@android:color/transparent"
+                android:gravity="left|center_vertical"
+                android:drawableLeft="@drawable/ic_action_maps_place_navy"
+                android:text="@string/omomo_place"
+                />
+
+        <TextView android:id="@+id/event_description_header"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:textStyle="bold"
+                  android:paddingLeft="@dimen/omomo_header_padding_left"
+                  android:paddingBottom="@dimen/omomo_event_data_event_decription_value_padding_bottom"
+                  android:textSize="@dimen/omomo_sub_header_text_size"
+                  android:textColor="@color/omomo_gray"
+                  android:layout_below="@+id/event_latest_place"
+                  android:text="@string/omomo_event_description"
+                />
+
+        <TextView android:id="@+id/event_description"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:textStyle="normal"
+                  android:paddingLeft="@dimen/omomo_header_padding_left"
+                  android:paddingRight="@dimen/omomo_header_padding_right"
+                  android:paddingBottom="@dimen/omomo_event_data_event_decription_value_padding_bottom"
+                  android:textSize="@dimen/omomo_sub_header_value_text_size"
+                  android:layout_below="@+id/event_description_header"
+                  android:textColor="@color/omomo_navy"
+                  android:layout_gravity="center_vertical|right"
+                  android:text="@string/omomo_no_data"
+                />
+
+        <Button
+                android:id="@+id/show_event_buy_ticket"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/omomo_button_height"
+                android:textSize="@dimen/omomo_button_text_size"
+                android:textStyle="normal"
+                android:layout_weight="1"
+                android:text="@string/omomo_buy_ticket"
+                android:layout_marginTop="@dimen/omomo_event_data_button_margin_top"
+                android:layout_marginRight="@dimen/omomo_event_data_button_margin_right"
+                android:layout_marginLeft="@dimen/omomo_event_data_button_margin_left"
+                android:layout_marginBottom="@dimen/omomo_event_data_button_margin_bottom"
+                android:background="@color/omomo_blue"
+                android:textColor="@android:color/white"
+                android:layout_below="@+id/event_description"
+                android:backgroundTint="@color/omomo_blue"/>
+
+        <Button
+                android:id="@+id/show_event_latest_repertoire"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/omomo_button_height"
+                android:textSize="@dimen/omomo_button_text_size"
+                android:textStyle="normal"
+                android:layout_weight="1"
+                android:text="@string/omomo_latest_terms"
+                android:layout_marginTop="@dimen/omomo_event_data_button_margin_top"
+                android:layout_marginRight="@dimen/omomo_event_data_button_margin_right"
+                android:layout_marginLeft="@dimen/omomo_event_data_button_margin_left"
+                android:layout_marginBottom="@dimen/omomo_event_data_button_margin_bottom"
+                android:background="@color/omomo_navy"
+                android:textColor="@android:color/white"
+                android:layout_below="@+id/show_event_buy_ticket"/>
+
+
+    </RelativeLayout>
+
+</ScrollView>

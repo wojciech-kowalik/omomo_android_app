@@ -1,0 +1,23 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/themes.xml on newer devices.
+    -->
+
+    <style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+    </style>
+
+    <style name="EditTextOmomo" >
+        <item name="android:background">@drawable/apptheme_edit_text_holo_light</item>
+        <item name="android:textColor">@color/omomo_navy</item>
+    </style>
+
+    <!-- Application theme. -->
+    <style name="Omomo" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:colorBackground">@color/omomo_background</item>
+        <item name="android:editTextStyle">@style/EditTextOmomo</item>
+    </style>
+
+</resources>

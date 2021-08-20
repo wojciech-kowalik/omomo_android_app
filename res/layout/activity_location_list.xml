@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/header"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/omomo_blue"
+            >
+
+   <TextView android:id="@+id/list_header"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:gravity="center_vertical"
+                  android:textStyle="bold"
+                  android:textSize="@dimen/omomo_header_text_size"
+                  android:textColor="#FFFFFF"
+                  android:padding="@dimen/omomo_header_padding"
+                  android:text="@string/omomo_locations"/>
+
+        <TextView android:id="@+id/list_header_location"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:textStyle="normal"
+                  android:layout_below="@+id/list_header"
+                  android:textSize="@dimen/omomo_header_text_size"
+                  android:textColor="@android:color/white"
+                  android:scrollbarThumbVertical="@drawable/custom_scroll_style"
+                />
+
+    </RelativeLayout>
+
+    <ListView
+            android:id="@android:id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:fadeScrollbars="false"
+            android:layout_below="@+id/header"
+            android:listSelector="@android:color/transparent"
+            android:cacheColorHint="@android:color/transparent"
+            />
+
+</RelativeLayout>
+

@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:id="@+id/map_container">
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:id="@+id/map"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_alignParentLeft="true"
+                  android:layout_alignParentRight="true"
+                  android:layout_alignParentTop="true"
+                  android:name="com.google.android.gms.maps.MapFragment" />
+
+            <Button
+                    android:id="@+id/button_direction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_action_maps_directions"
+                    android:textSize="@dimen/omomo_button_text_size"
+                    android:paddingLeft="@dimen/omomo_map_filtr_map_button_padding_left"
+                    android:paddingRight="@dimen/omomo_map_filtr_map_button_padding_right"
+                    android:layout_marginTop="@dimen/omomo_map_filtr_map_button_margin_top"
+                    android:layout_marginBottom="@dimen/omomo_map_filtr_map_button_margin_bottom"
+                    android:background="@color/omomo_blue"
+                    android:textStyle="normal"
+                    android:textColor="@android:color/white"
+                    android:layout_gravity="bottom|center"
+                    android:text="@string/omomo_show_direction"
+                    />
+
+    </FrameLayout>
+
+</LinearLayout>

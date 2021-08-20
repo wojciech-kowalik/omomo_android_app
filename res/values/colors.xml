@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="omomo_blue">#3BBFE6</color>
+    <color name="omomo_red">#E60E0E</color>
+    <color name="omomo_navy">#27374e</color>
+    <color name="omomo_background">#e8eeee</color>
+    <color name="omomo_gray">#828993</color>
+    <color name="omomo_no_buy_ticket">#c7c7c7</color>
+</resources>

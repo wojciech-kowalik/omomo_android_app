@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/omomo_background"
+        >
+
+    <ScrollView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/scroll_filter_data"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/omomo_repertoire_filter_height_data"
+            android:fadeScrollbars="false"
+            android:scrollbarFadeDuration="0"
+            >
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                      android:orientation="vertical"
+                      android:layout_width="fill_parent"
+                      android:layout_height="fill_parent"
+                      android:scrollbars="vertical"
+                      android:focusable="true"
+                      android:focusableInTouchMode="true"
+                >
+
+            <RelativeLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/map_view_container"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/omomo_navy">
+
+                <TextView android:id="@+id/list_header"
+                          android:layout_width="fill_parent"
+                          android:layout_height="wrap_content"
+                          android:gravity="center_vertical"
+                          android:textStyle="normal"
+                          android:textColor="@android:color/white"
+                          android:textSize="@dimen/omomo_header_text_size"
+                          android:padding="@dimen/omomo_header_padding"
+                          android:background="@color/omomo_navy"
+                          android:textAllCaps="true"
+                          android:text="@string/omomo_repertoire_filter"/>
+
+            </RelativeLayout>
+
+            <TextView android:id="@+id/repertoire_filter_name"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:gravity="center_vertical"
+                      android:textStyle="normal"
+                      android:textSize="@dimen/omomo_sub_header_text_size"
+                      android:textColor="@color/omomo_navy"
+                      android:paddingTop="@dimen/omomo_header_padding_top"
+                      android:paddingLeft="@dimen/omomo_header_padding_left"
+                      android:paddingRight="@dimen/omomo_header_padding_right"
+                      android:text="@string/omomo_repertoire_filter_name"/>
+
+            <FrameLayout android:layout_width="match_parent"
+                         android:layout_height="wrap_content">
+
+                <pl.visualnet.omomo.ui.view.DelayAutoCompleteTextView
+                        style="@style/EditTextOmomo"
+                        android:id="@+id/auto_complete_filter_text_view"
+                        android:layout_marginRight="@dimen/omomo_header_padding_right"
+                        android:layout_marginLeft="@dimen/omomo_header_padding_left"
+                        android:inputType="textCapSentences"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/omomo_event"
+                        android:textSize="@dimen/omomo_repertoire_filter_autocomplete_text_size"
+                        android:imeOptions="flagNoExtractUi|actionSearch"/>
+
+                <ProgressBar
+                        android:id="@+id/loading_indicator"
+                        style="?android:attr/progressBarStyleSmallInverse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|right"
+                        android:layout_marginRight="@dimen/omomo_repertoire_filter_progressbar_indicator"
+                        android:visibility="gone"/>
+
+            </FrameLayout>
+
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:textStyle="normal"
+                    android:textSize="@dimen/omomo_sub_header_text_size"
+                    android:textColor="@color/omomo_navy"
+                    android:paddingTop="@dimen/omomo_repertoire_filter_padding_top"
+                    android:paddingLeft="@dimen/omomo_header_padding_left"
+                    android:paddingRight="@dimen/omomo_header_padding_right"
+                    android:text="@string/omomo_city"/>
+
+            <pl.visualnet.omomo.utils.MultiSpinner
+                    style="@style/EditTextOmomo"
+                    android:id="@+id/repertoire_filter_city"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/omomo_header_padding_left"
+                    android:layout_marginRight="@dimen/omomo_header_padding_right"
+                    android:hint="@string/omomo_choose"
+                    />
+
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:textStyle="normal"
+                    android:textSize="@dimen/omomo_sub_header_text_size"
+                    android:textColor="@color/omomo_navy"
+                    android:paddingTop="@dimen/omomo_repertoire_filter_padding_top"
+                    android:paddingLeft="@dimen/omomo_header_padding_left"
+                    android:paddingRight="@dimen/omomo_header_padding_right"
+                    android:text="@string/omomo_category"/>
+
+            <pl.visualnet.omomo.utils.MultiSpinner
+                    style="@style/EditTextOmomo"
+                    android:id="@+id/repertoire_filter_category"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/omomo_header_padding_left"
+                    android:layout_marginRight="@dimen/omomo_header_padding_right"
+                    android:hint="@string/omomo_choose"
+                    />
+
+            <TextView android:id="@+id/repertoire_filter_date_from"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:gravity="center_vertical"
+                      android:textStyle="normal"
+                      android:textSize="@dimen/omomo_sub_header_text_size"
+                      android:textColor="@color/omomo_navy"
+                      android:paddingTop="@dimen/omomo_repertoire_filter_padding_top"
+                      android:paddingLeft="@dimen/omomo_header_padding_left"
+                      android:paddingRight="@dimen/omomo_header_padding_right"
+                      android:text="@string/omomo_repertoire_filter_date_from"/>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:padding="@dimen/omomo_repertoire_filter_padding_top"
+                    >
+
+                <EditText
+                        android:id="@+id/txt_date_from"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:editable="false"
+                        android:textSize="@dimen/omomo_sub_header_value_text_size"
+                        android:layout_marginLeft="@dimen/omomo_repertoire_filter_date_margin_left"
+                        android:focusable="false"
+                        android:hint="@string/omomo_date">
+                </EditText>
+
+                <ImageButton
+                        android:id="@+id/btn_date_picker_from"
+                        android:layout_width="@dimen/omomo_button_height"
+                        android:layout_height="@dimen/omomo_button_height"
+                        android:contentDescription="test"
+                        android:clickable="true"
+                        android:background="@color/omomo_blue"
+                        android:src="@drawable/ic_action_editor_insert_invitation"/>
+
+                <EditText
+                        android:id="@+id/txt_time_from"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/omomo_sub_header_value_text_size"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:hint="@string/omomo_time"
+                        >
+                </EditText>
+
+                <ImageButton
+                        android:id="@+id/btn_time_picker_from"
+                        android:layout_width="@dimen/omomo_button_height"
+                        android:layout_height="@dimen/omomo_button_height"
+                        android:contentDescription="test"
+                        android:clickable="true"
+                        android:layout_marginRight="@dimen/omomo_repertoire_filter_date_margin_right"
+                        android:background="@color/omomo_blue"
+                        android:src="@drawable/ic_action_av_av_timer"/>
+
+
+            </LinearLayout>
+
+            <TextView android:id="@+id/repertoire_filter_date_to"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:gravity="center_vertical"
+                      android:textStyle="normal"
+                      android:textSize="@dimen/omomo_sub_header_text_size"
+                      android:textColor="@color/omomo_navy"
+                      android:paddingTop="@dimen/omomo_repertoire_filter_padding_top"
+                      android:paddingLeft="@dimen/omomo_header_padding_left"
+                      android:paddingRight="@dimen/omomo_header_padding_right"
+                      android:text="@string/omomo_repertoire_filter_date_to"/>
+
+            <LinearLayout
+                    android:id="@+id/date_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/omomo_repertoire_filter_padding_top"
+                    >
+
+                <EditText
+                        android:id="@+id/txt_date_to"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/omomo_sub_header_value_text_size"
+                        android:layout_marginLeft="@dimen/omomo_repertoire_filter_date_margin_left"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:hint="@string/omomo_date"
+                        >
+                </EditText>
+
+                <ImageButton
+                        android:id="@+id/btn_date_picker_to"
+                        android:layout_width="@dimen/omomo_button_height"
+                        android:layout_height="@dimen/omomo_button_height"
+                        android:contentDescription="test"
+                        android:clickable="true"
+                        android:background="@color/omomo_blue"
+                        android:src="@drawable/ic_action_editor_insert_invitation"/>
+
+                <EditText
+                        android:id="@+id/txt_time_to"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/omomo_sub_header_value_text_size"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:hint="@string/omomo_time"
+                        >
+                </EditText>
+
+                <ImageButton
+                        android:id="@+id/btn_time_picker_to"
+                        android:layout_width="@dimen/omomo_button_height"
+                        android:layout_height="@dimen/omomo_button_height"
+                        android:contentDescription="test"
+                        android:clickable="true"
+                        android:background="@color/omomo_blue"
+                        android:layout_marginRight="@dimen/omomo_repertoire_filter_date_margin_right"
+                        android:src="@drawable/ic_action_av_av_timer"/>
+
+
+            </LinearLayout>
+
+            <EditText
+                    android:id="@+id/txt_city_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    >
+            </EditText>
+
+            <EditText
+                    android:id="@+id/txt_city_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    >
+            </EditText>
+
+            <EditText
+                    android:id="@+id/txt_category_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    >
+            </EditText>
+
+            <EditText
+                    android:id="@+id/txt_category_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    >
+            </EditText>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/scroll_filter_data"
+            android:gravity="center"
+            android:textAlignment="center"
+            >
+
+        <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_filter"
+                android:layout_width="@dimen/omomo_repertoire_button_width"
+                android:layout_height="@dimen/omomo_button_height"
+                android:textSize="@dimen/omomo_sub_header_text_size"
+                android:background="@color/omomo_blue"
+                android:textStyle="normal"
+                android:layout_margin="@dimen/omomo_repertoire_filter_padding_top"
+                android:textColor="@android:color/white"
+                android:text="@string/omomo_filter_filter"
+                style="@style/Widget.AppCompat.Button.Colored"/>
+
+        <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_filter_clean"
+                android:layout_width="@dimen/omomo_repertoire_button_width"
+                android:layout_height="@dimen/omomo_button_height"
+                android:textSize="@dimen/omomo_sub_header_text_size"
+                android:layout_margin="@dimen/omomo_repertoire_filter_padding_top"
+                android:background="@color/omomo_no_buy_ticket"
+                android:padding="@dimen/omomo_repertoire_filter_padding_top"
+                android:textColor="@android:color/white"
+                android:text="@string/omomo_filter_clean"
+                style="@style/Widget.AppCompat.Button.Colored"
+                />
+
+    </LinearLayout>
+
+</RelativeLayout>

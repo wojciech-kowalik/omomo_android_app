@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/list_row"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants"
+                android:padding="10dp">
+
+    <LinearLayout
+            android:id="@+id/list_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true">
+
+        <ImageButton
+                android:id="@+id/show_all_repertoire"
+                android:layout_width="@dimen/omomo_button_height"
+                android:layout_height="@dimen/omomo_button_height"
+                android:layout_toRightOf="@+id/city_name"
+                android:contentDescription="test"
+                android:layout_weight="1"
+                android:src="@drawable/ic_action_action_subject"/>
+
+    </LinearLayout>
+
+    <TextView
+            android:id="@+id/location_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="@dimen/omomo_sub_header_text_size"
+            android:paddingLeft="@dimen/omomo_header_padding_left"
+            android:textColor="@android:color/white">
+    </TextView>
+
+    <TextView
+            android:id="@+id/location_repertoire_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/location_name"
+            android:textSize="@dimen/omomo_sub_header_text_size"
+            android:paddingLeft="@dimen/omomo_header_padding_left"
+            android:paddingTop="@dimen/omomo_header_padding_top"
+            android:text="@string/omomo_term_counter"
+            android:textColor="@android:color/white">
+    </TextView>
+
+</RelativeLayout>

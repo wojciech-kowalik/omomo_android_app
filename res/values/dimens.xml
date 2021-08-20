@@ -1,0 +1,96 @@
+<resources>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- general -->
+    <dimen name="omomo_padding">16dp</dimen>
+    <dimen name="omomo_padding_bottom">16dp</dimen>
+    <dimen name="omomo_header_text_size">18sp</dimen>
+    <dimen name="omomo_sub_header_text_size">15sp</dimen>
+    <dimen name="omomo_sub_header_value_text_size">14sp</dimen>
+    <dimen name="omomo_header_padding">12dp</dimen>
+    <dimen name="omomo_header_padding_left">12dp</dimen>
+    <dimen name="omomo_header_padding_right">12dp</dimen>
+    <dimen name="omomo_header_padding_top">12dp</dimen>
+    <dimen name="omomo_header_padding_bottom">12dp</dimen>
+    <dimen name="omomo_button_height">40dp</dimen>
+    <dimen name="omomo_button_text_size">16sp</dimen>
+
+    <!-- activity_event_data -->
+    <dimen name="omomo_event_data_header_padding">6dp</dimen>
+    <dimen name="omomo_event_data_header_text_size">18sp</dimen>
+    <dimen name="omomo_event_data_image_width">130dp</dimen>
+    <dimen name="omomo_event_data_image_height">184dp</dimen>
+    <dimen name="omomo_event_data_margin">16dp</dimen>
+    <dimen name="omomo_event_data_button_padding_left">5dp</dimen>
+    <dimen name="omomo_event_data_button_category_height">35dp</dimen>
+    <dimen name="omomo_event_data_button_place_width">220dp</dimen>
+    <dimen name="omomo_event_data_event_decription">16dp</dimen>
+    <dimen name="omomo_event_data_event_decription_value_padding_bottom">5dp</dimen>
+    <dimen name="omomo_event_data_button_margin_top">5dp</dimen>
+    <dimen name="omomo_event_data_button_margin_left">12dp</dimen>
+    <dimen name="omomo_event_data_button_margin_right">12dp</dimen>
+    <dimen name="omomo_event_data_button_margin_bottom">12dp</dimen>
+
+    <!-- activity_launcher -->
+    <dimen name="omomo_launcher_container_margin_left">44dp</dimen>
+    <dimen name="omomo_launcher_container_margin_right">44dp</dimen>
+    <dimen name="omomo_launcher_container_margin_top">16dp</dimen>
+    <dimen name="omomo_launcher_container_margin_bottom">16dp</dimen>
+    <dimen name="omomo_launcher_image_margin_top">170dp</dimen>
+    <dimen name="omomo_launcher_version">12sp</dimen>
+
+    <!-- activity_main_list -->
+    <dimen name="omomo_main_list_image_gps_width">40dp</dimen>
+    <dimen name="omomo_main_list_image_gps_height">40dp</dimen>
+    <dimen name="omomo_main_list_image_gps_margin_top">6dp</dimen>
+    <dimen name="omomo_main_list_text_gps_padding_top">14dp</dimen>
+    <dimen name="omomo_main_list_text_gps_margin_right">40dp</dimen>
+    <dimen name="omomo_main_list_filtr_padding_left">14dp</dimen>
+    <dimen name="omomo_main_list_filtr_padding_right">14dp</dimen>
+    <dimen name="omomo_main_list_filtr_text_size">13sp</dimen>
+    <dimen name="omomo_main_list_filtr_button_padding_left">7dp</dimen>
+    <dimen name="omomo_main_list_filtr_divider_height">15dp</dimen>
+    <dimen name="omomo_main_list_filtr_no_repertoire_text_size">22sp</dimen>
+
+    <!-- activity_map -->
+    <dimen name="omomo_map_filtr_map_button_padding_left">10dp</dimen>
+    <dimen name="omomo_map_filtr_map_button_padding_right">20dp</dimen>
+    <dimen name="omomo_map_filtr_map_button_margin_top">5dp</dimen>
+    <dimen name="omomo_map_filtr_map_button_margin_bottom">65dp</dimen>
+
+    <!-- activity_repertoire_filter -->
+    <dimen name="omomo_repertoire_filter_autocomplete_text_size">16sp</dimen>
+    <dimen name="omomo_repertoire_filter_progressbar_indicator">15dp</dimen>
+    <dimen name="omomo_repertoire_filter_padding_top">5dp</dimen>
+    <dimen name="omomo_repertoire_filter_date_margin_left">6dp</dimen>
+    <dimen name="omomo_repertoire_filter_date_margin_right">6dp</dimen>
+    <dimen name="omomo_repertoire_button_container">10dp</dimen>
+    <dimen name="omomo_repertoire_button_width">150dp</dimen>
+    <dimen name="omomo_repertoire_filter_height_data">400dp</dimen>
+
+    <!-- activity_web -->
+    <dimen name="omomo_web_padding_left">5dp</dimen>
+    <dimen name="omomo_web_padding_right">5dp</dimen>
+    <dimen name="omomo_web_button_cart_height">45dp</dimen>
+    <dimen name="omomo_web_button_cart_padding">12dp</dimen>
+    <dimen name="omomo_web_button_buy_width">170dp</dimen>
+    <dimen name="omomo_web_button_padding">4dp</dimen>
+
+    <!-- listview_repertoire_item_row -->
+    <dimen name="omomo_repertoire_item_row_padding_left">6dp</dimen>
+    <dimen name="omomo_repertoire_item_row_event_name_padding">12dp</dimen>
+    <dimen name="omomo_repertoire_item_row_image_width">90dp</dimen>
+    <dimen name="omomo_repertoire_item_row_image_height">133dp</dimen>
+    <dimen name="omomo_repertoire_item_row_image_margin_top">50dp</dimen>
+    <dimen name="omomo_repertoire_item_row_image_margin_right">15dp</dimen>
+    <dimen name="omomo_repertoire_item_row_category_height">25dp</dimen>
+    <dimen name="omomo_repertoire_item_row_txt_size">14sp</dimen>
+    <dimen name="omomo_repertoire_item_place_name_width">230dp</dimen>
+    <dimen name="omomo_repertoire_item_distance_padding_left">27dp</dimen>
+    <dimen name="omomo_repertoire_item_divider_height">4dp</dimen>
+    <dimen name="omomo_repertoire_item_divider_margin_top">25dp</dimen>
+    <dimen name="omomo_repertoire_item_button_map_width">180dp</dimen>
+
+</resources>
